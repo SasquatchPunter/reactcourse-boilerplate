@@ -1,0 +1,31 @@
+$button-color: #3a87cf;
+$button-color-secondary: #888;
+
+.button {
+  padding: $xs-size;
+  background: $button-color;
+  border: none;
+  color: white;
+  font-weight: 300;
+  font-size: $font-size-l;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 1;
+  &--link {
+    background: transparent;
+    &:hover {
+      background: transparent !important;
+    }
+  }
+  &:hover {
+    background: lighten($button-color, 5%);
+  }
+}
+
+.button--secondary {
+  @extend .button;
+  background: $button-color-secondary;
+  &:hover {
+    background: lighten($button-color-secondary, 5%);
+  }
+}
